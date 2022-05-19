@@ -1,4 +1,4 @@
-let apiPath = "https://riverbox-api.lankybox02.repl.co/";
+let apiPath = "https://riverbox-api.turtle84375.repl.co/";
 let lastSelectedPostReportID;
 let lastbanneduserattempt;
 let lastcommunityfetched;
@@ -360,7 +360,7 @@ function sendPost(postContent) {
 // e.innerText = "Liked (...)";
 // e.style.fontDecoration = null;
 // e.style.cursor = null;
-// postData('https://riverbox-api.lankybox02.repl.co/like', JSON.parse(`{"username": "` + localStorage.getItem("username") + `", "session": "` + localStorage.getItem("session") + `", "post": "${postId}"}`))
+// postData('https://riverbox-api.turtle84375.repl.co/like', JSON.parse(`{"username": "` + localStorage.getItem("username") + `", "session": "` + localStorage.getItem("session") + `", "post": "${postId}"}`))
 //   .then(data => {
 //     if (data.success) {
 //       e.innerText = "Liked (" + newCount.toString() + ")";
