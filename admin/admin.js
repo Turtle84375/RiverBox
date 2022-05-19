@@ -1,10 +1,10 @@
 let rawTickets;
 
-fetch("https://riverbox-api.lankybox02.repl.co/signin/" + localStorage.getItem("username") + "/" + localStorage.getItem("session"))
+fetch("https://riverbox-api.turtle84375.repl.co/signin/" + localStorage.getItem("username") + "/" + localStorage.getItem("session"))
    .then(response => response.json())
    .then(data => computeLoginData(data))
 
-fetch("https://riverbox-api.lankybox02.repl.co/reports")
+fetch("https://riverbox-api.turtle84375.repl.co/reports")
    .then(response => response.json())
    .then(data => rawTickets = data)
 
