@@ -488,3 +488,10 @@ for(let i = 0;i < Object.keys(x).length;i++) {
     document.getElementById("ul").insertAdjacentHTML("afterBegin", `<details><summary>${Object.keys(x)[i]}</summary>${x[Object.keys(x)[i]]}</details>`);
 }
 }
+
+function modPost(postId) {
+postData(apiPath + 'remove', JSON.parse(`{"post": "${postId}", "username": "` + localStorage.getItem("username") `"}`))
+  .then(data => {
+      window.location.reload();
+  });
+}
