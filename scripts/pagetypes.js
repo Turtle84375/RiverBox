@@ -160,7 +160,7 @@ A username can only be between 3 to 10 characters long
   },
   "apifail": {
     "title": "Whoops!",
-    "content": "<h1>Whoops!</h1><span>It seems like the API is down. Please create an issue on <a href='https://github.com/lankybox02/RiverBox'>our github page</a>. Sorry for the inconvenience :(</span>",
+    "content": "<h1>Whoops!</h1><span>It seems like the API is down. Please create an issue on <a href='https://github.com/Turtle84375/RiverBox'>our github page</a>. Sorry for the inconvenience :(</span>",
     "script": ``,
     "accountonly": false,
     "padding": true,
