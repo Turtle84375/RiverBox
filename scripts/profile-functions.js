@@ -331,27 +331,20 @@ function addLink(name, link) {
   if (name.includes("^") || link.includes("^")) {
   if (!link.startsWith("https://")) {
     modal('', 'Ay, just something to think about. Did you know that ' + link + ' is not an actual URL?<br><br>That\'s right. It\'s missing the https:// at the start 😝');
-  }else{
-  if (name == "" && link == "") {
+  } else if (name == "" && link == "") {
     modal('', 'Not sure how you\'re gonna add a link when you don\' provide any info...');
-  }else{
-  if (name == "") {
+  } else if (name == "") {
     modal('', 'Pretty sure you need to add the name of a link?');
-  }else{
-  if (link == "") {
+  } else if (link == "") {
     modal('', 'I think you need to add a link too...just my opinion though, could be wrong tough...');
-  }else{
-  if (linkcount > 2) {
+  } else if (linkcount > 2) {
     modal('', 'Hey kiddo, you have reached the limit of 3 links. Clear them links or just stop adding them 🥱');
-  }else{
+  } else {
   modal('', 'The link was added - your profile should update in 5-10 seconds.');
   postData(apiPath + 'addlink', JSON.parse(`{"username": "` + localStorage.getItem("username") + `", "session": "` + localStorage.getItem("session") + `", "name": "` + name + `", "link": "` + link + `"}`))
   .then(data => {
       viewUserPage(lastfetcheduser);
   });
-  }
-  }
-  }
   }
   }
 }
