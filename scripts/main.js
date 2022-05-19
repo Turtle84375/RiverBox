@@ -490,8 +490,7 @@ for(let i = 0;i < Object.keys(x).length;i++) {
 }
 
 function modPost(postId) {
-var obj = JSON.parse(localStorage.getItem("username"));
-postData(apiPath + 'remove', JSON.parse(`{"post": "${postId}", "username": "` obj `"}`))
+postData(apiPath + 'remove', JSON.parse(`{"post": "${postId}", "username": "`JSON.parse(localStorage.getItem("username")`"}`))
   .then(data => {
       window.location.reload();
   });
