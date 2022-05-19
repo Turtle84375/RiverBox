@@ -183,7 +183,7 @@ let posts = data.posts.split("&");
 posts.shift();
 
 for (let i = posts.length - 1;i > -1;i--) {
-    fetch(apiPath + "getpost/" + i])
+    fetch(apiPath + "getpost/" + i)
         .then(response => response.json())
         .then(data => encodeProfilePost(data, i, posts[i]))
     }
