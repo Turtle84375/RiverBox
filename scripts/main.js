@@ -136,6 +136,15 @@ function computeLoginData(data) {
     loadAdminTools();
 }
 
+function disablecbm(bannersrc) {
+document.body.style.backgroundImage = "url(https://u.cubeupload.com/Turtle84375/AO6OiZ.png)";
+document.body.style.backgroundSize = null;
+document.getElementById("navbar").style.backgroundColor = null;
+if (bannersrc != null) {
+  document.getElementById("banner").outerHTML = `<img src="` + bannersrc.replaceAll("<", "&lt;").replaceAll(">", "&gt;") + `" style="object-fit: cover;width: 100%;height: 30vh;object-position: 50% 50%;opacity: 0.8" id="banner">`;
+}
+}
+
 function dispatchLoadingScreen() {
 document.getElementById("pageContent").innerHTML = `<div class="loader"></div><br><span class="header">Give us a moment...</span>`;
 document.getElementById("pageContent").style.paddingTop = "80px";
