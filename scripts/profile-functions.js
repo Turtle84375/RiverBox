@@ -232,7 +232,7 @@ document.getElementById("navbar").style.backgroundColor = "transparent";
 }
 
 function disablecbm(bannersrc) {
-document.body.style.backgroundImage = "url(https://u.cubeupload.com/lankysback/AO6OiZ.png)";
+document.body.style.backgroundImage = "url(https://u.cubeupload.com/Turtle84375/AO6OiZ.png)";
 document.body.style.backgroundSize = null;
 document.getElementById("navbar").style.backgroundColor = null;
 if (bannersrc != null) {
