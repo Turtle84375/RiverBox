@@ -253,7 +253,7 @@ document.getElementById("postshomex_").insertAdjacentHTML(x0, `<div class="post"
 <div ` + adminClassLoad() + `><span class="socialButton" onclick="modPost(${i})">(Moderate)</span> <span class="socialButton">(ID: ${i})</span></div>
 <div style="float: right;color: var(--secondaryfont);">` + moment(x[data].timestamp) + `</div></div><br>` + b + `<br>`);
 
-	(apiPath + 'postpfp', JSON.parse(`{"postid": "${i}"}`))
+postData(apiPath + 'postpfp', JSON.parse(`{"postid": "${i}"}`))
   .then(data => {
     document.getElementById(`img${i}`).setAttribute("src", data.pfp);
   });
