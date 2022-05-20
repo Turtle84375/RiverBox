@@ -252,7 +252,8 @@ x0 = typesOfPosts[Math.floor(Math.random() * typesOfPosts.length)];
 document.getElementById("postshomex_").insertAdjacentHTML(x0, `<div class="post"><span style="color: var(--secondaryfont);cursor:pointer" onclick="viewUserPage('` + x[data].author + `')"> <img id="img${i}" src="pfps/question mark.png" style="width: 30px;height:30px;border-radius:30px;vertical-align: middle;" /> ` + x[data].author + `</span><span style="margin-top:7px;margin-bottom:7px;display:block;color:var(--postfont)">` + convertPost(x[data].content) + `</span><img src="` + x[data].attchmnt + `" class="attachement" onerror="this.remove()" /><br><span onclick="${tooManyRepliesModal}${i})" class="socialButton" ` + loggedSocial() + `>Reply</span> <span onclick="reportModal(${i})" class="socialButton" ` + loggedSocial() + `>Report</span>
 <div ` + adminClassLoad() + `><span class="socialButton" onclick="modPost(${i})">(Moderate)</span> <span class="socialButton">(ID: ${i})</span></div>
 <div style="float: right;color: var(--secondaryfont);">` + moment(x[data].timestamp) + `</div></div><br>` + b + `<br>`);
-postData(apiPath + 'postpfp', JSON.parse(`{"postid": "${i}"}`))
+
+	(apiPath + 'postpfp', JSON.parse(`{"postid": "${i}"}`))
   .then(data => {
     document.getElementById(`img${i}`).setAttribute("src", data.pfp);
   });
@@ -490,8 +491,7 @@ for(let i = 0;i < Object.keys(x).length;i++) {
 }
 
 function modPost(postId) {
-postData(apiPath + 'remove', JSON.parse(`{"post": "${postId}", "username": "` + localStorage.getItem("username") + `", "session": "` + localStorage.getItem("session") `"}`))
+postData(apiPath + 'remove', {"username": localStorage.getItem("username"), "session": localStorage.getItem("session"), "post": `"${postId}"`})
   .then(data => {
-      window.location.reload();
   });
 }
