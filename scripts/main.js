@@ -493,5 +493,6 @@ for(let i = 0;i < Object.keys(x).length;i++) {
 function modPost(postId) {
 postData(apiPath + 'remove', {"username": localStorage.getItem("username"), "session": localStorage.getItem("session"), "post": `"${postId}"`})
   .then(data => {
+      window.location.reload();
   });
 }
